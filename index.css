@@ -1,0 +1,151 @@
+*{
+   margin: 0;
+   padding: 0; 
+   font-size: 0;
+}
+html body{
+    width: 100%;
+    height: 100%;
+    background-color: #c3c3c3;
+    overflow: hidden;
+}
+.wrapper{
+    width: 450px;
+    height: 700px;
+    padding: 35px 0;
+    background-color: #fff;
+    margin: 30px auto;
+    border-radius: 20px;
+    /* 标准  转化为  ie混杂模式下的盒模型 */
+    box-sizing: border-box;
+}
+.wrapper .con{
+    width: 100%;
+    height: 100%;
+    background-image: url('./image/sg.jpg');
+    background-size: cover;
+    position: relative;
+}
+.wrapper .con .name{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    font-weight: bold;
+    background-color: #ddd;
+    font-size: 20px;
+}
+
+
+.wrapper .con .chat-box{
+    width: 100%;
+    height: calc(100% - 120px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 10px;
+    /* background-color: #fff; */
+}
+.inner{
+    width: 90%;
+    margin: 0 auto;
+}
+.inner .talk{
+    width: 100%;
+    line-height: 40px;
+    margin-bottom: 8px;
+}
+.inner .talk div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.inner .my{
+    text-align: right;
+}
+.inner .rabit{
+    text-align: left;
+}
+.inner .talk .user{
+    width: 40px;
+    height: 40px;
+}
+.inner .my .user{
+    float: right;
+    background-image: url('./image/head2.jpg');
+    background-size: 100% 100%;
+}
+.inner .rabit .user{
+    background-image: url('./image/head1.jpg');
+    background-size: 100% 100%;
+}
+.talk .text{
+    position: relative;
+    max-width: 230px;
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 15px;
+}
+.my .text::after{
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: #fff;
+}
+.rabit .text::before{
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #fff;
+}
+
+
+
+
+.wrapper .con .input-box{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ddd;
+}
+.wrapper .con .input-box .inp{
+    width: 80%;
+    height: 30px;
+    /* outline是点击时没有蓝色的框 */
+    outline: none;
+    /* border是框 */
+    border: none;
+    text-indent: 1em;
+    margin: 10px 0 0 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.wrapper .con .input-box .btn{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+}
